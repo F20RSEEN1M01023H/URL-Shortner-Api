@@ -6,12 +6,11 @@ interface CreateLinkBody {
   url: string;
 }
 
-// Extending Record<string, string> satisfies Express's ParamsDictionary type
 interface CodeParams extends Record<string, string> {
   code: string;
 }
 
-const linkService = new LinkService();
+const linkService = LinkService;
 
 export const createLink: RequestHandler<{}, any, CreateLinkBody> = async (req, res, next) => {
   try {

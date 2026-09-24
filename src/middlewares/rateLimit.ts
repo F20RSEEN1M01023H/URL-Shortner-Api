@@ -1,5 +1,5 @@
 import { Request, Response as ExpressResponse, NextFunction } from 'express';
-import Response from '../utils/response.js';
+import Response from '../utils/response';
 
 interface RateLimitOptions {
   windowMs?: number;

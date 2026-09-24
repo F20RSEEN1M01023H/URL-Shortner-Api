@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
 import { LinkService } from '../services/linkService';
-import Response from '../utils/response.js';
+import Response from '../utils/response';
 
 interface CreateLinkBody {
   url: string;

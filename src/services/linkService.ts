@@ -25,7 +25,7 @@ const createShortLink = async (originalUrl: string): Promise<ILink> => {
 };
 
 const getAndIncrementLink = async (code: string): Promise<ILink> => {
-  const link = await Link.findOneAndUpdate({ code }, { $inc: { clicks: 1 } }, { new: true });
+  const link = await Link.findOneAndUpdate({ code }, { $inc: { clicks: 1 } });
 
   if (!link) {
     throw new AppError(404, 'Short link not found');
